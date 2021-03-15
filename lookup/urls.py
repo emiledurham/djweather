@@ -11,3 +11,4 @@ urlpatterns = [
 # {{ 'about' }} in html links to home or {% url 'about' %}
 # ! USE url syntax to pull name because path could change
 
+
