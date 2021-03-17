@@ -1,26 +1,20 @@
 html, body {
-    background-color: teal;
+    background-color: #d7c797
 }
 
+.wbox {
+    margin: 50px;
+    padding: 50px;
+    border-radius: 15px;
 
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: gray;
-  overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+.good {background-color: #368d33;}
+.moderate {background-color: #FFFF00;}
+.usg {background-color: #FF9900;}
+.unhealthy {background-color: #FF0000 ;}
+.veryunhealthy {background-color: #990066;}
+.hazardous {background-color: #660000;}
+.error {background-color: #d29958;}
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+

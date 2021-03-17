@@ -1,4 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Home page</h1>
+
+{% if zipcode %}
+    {{ zipcode }}
+{% endif %}
+{% if api %}
+    {% if api == 'Error...' or api.0.AQI == -1 %}
+     <div class="wbox mb-2 {{ category_color }}">
+            <h1 class="display-4">Not Available</h1>
+            <p class=" lead ">{{ category_description }}</p>
+        </div>
+    {% else %}
+        <div class="wbox mb-2 {{ category_color }}">
+            <h1 class="display-4">{{ api.0.Category.Name }}</h1>
+            <p class=" lead ">Current Air Quality in {{ api.0.ReportingArea }} : <b>{{ api.0.AQI }}</b></p>
+            <p>{{ category_description }}</p>
+        </div>
+    {% endif %}
+{% endif %}
+
 {% endblock %}
+
+
